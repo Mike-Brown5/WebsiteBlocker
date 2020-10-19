@@ -5,8 +5,10 @@ host_path = "/etc/hosts" # FOR LINUX!!
 #host_path = "/private/etc/hosts" # FOR MAC!!
 #host_path = "C:\\Windows\\System32\\Drivers\\etc\\hosts" # FOR WINDOWS!!!
 redirect = "127.0.0.1"
+#Defining the websites list
 websites = ["facebook.com", "youtube.com", "myanimelist.net", "instagram.com", "twitter.com"]
 
+#Blocking the websites on working hours (8AM:4PM)
 while True:
     if dt(dt.now().year, dt.now().month, dt.now().day, 8) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day, 16):
         with open(host_path, "r+") as file:
