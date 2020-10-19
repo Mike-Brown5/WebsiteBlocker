@@ -1,2 +1,2 @@
 # Websites Blocker
-Note : u have to run the script with as an administrator
+Note : u have to run the script as an administrator
