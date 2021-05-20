@@ -6,7 +6,7 @@ host_path = "/etc/hosts" # FOR LINUX!!
 #host_path = "C:\\Windows\\System32\\Drivers\\etc\\hosts" # FOR WINDOWS!!!
 redirect = "127.0.0.1"
 #Defining the websites list
-websites = ["facebook.com", "youtube.com", "myanimelist.net", "instagram.com", "twitter.com"]
+websites = ["facebook.com", "youtube.com", "myanimelist.net", "instagram.com", "twitter.com","https://www.youtube.com/","https://www.facebook.com/"]
 
 #Blocking the websites on working hours (8AM:4PM)
 while True:
