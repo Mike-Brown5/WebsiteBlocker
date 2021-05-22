@@ -19,5 +19,3 @@ def unblock():
                 file.write(web)
         file.truncate()
         print("unblocked!!")
-
-unblock()

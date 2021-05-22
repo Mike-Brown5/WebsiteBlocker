@@ -1,4 +1,4 @@
-import time, os
+import time, os ,PyQt5
 from datetime import datetime as dt
 
 host_pathL = "/etc/hosts" # FOR LINUX!!
@@ -17,8 +17,7 @@ websites = ["facebook.com", "youtube.com", "myanimelist.net", "instagram.com", "
 #Blocking the websites on working hours (8AM:4PM)
 def block():
     while True:
-        
-        if dt(dt.now().year, dt.now().month, dt.now().day, 8) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day, 16):
+        if dt(dt.now().year, dt.now().month, dt.now().day, 2) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day, 16):
             with open(host_path, "r+") as file:
                 content = file.read()
                 for web in websites:
@@ -36,6 +35,5 @@ def block():
                         file.write(web)
                 file.truncate()
             print("Not working....")
-        time.sleep(20)
-
-block()
+        time.sleep(40)
+        PyQt5.QtCore.QTimer(interval=4 *1000)

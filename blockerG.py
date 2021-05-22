@@ -1,5 +1,7 @@
 import sys , PyQt5
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton
+from blocker import block as bl
+from unblock import unblock as ub
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QAction, QMessageBox, QLineEdit
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import pyqtSlot
 
@@ -11,12 +13,12 @@ def window():
    button1 = QPushButton(widget)
    button1.setText("BLOCK")
    button1.move(64,32)
-   button1.clicked.connect(button1_clicked)
+   button1.clicked.connect(bl)
 
    button2 = QPushButton(widget)
    button2.setText("UNBLOCK")
    button2.move(64,64)
-   button2.clicked.connect(button2_clicked)
+   button2.clicked.connect(ub)
 
    widget.setGeometry(50,50,320,200)
    widget.setWindowTitle("BLOCKER")
