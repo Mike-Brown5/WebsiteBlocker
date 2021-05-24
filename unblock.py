@@ -10,12 +10,3 @@ elif os.path.exists(host_pathM) == True:
     host_path = host_pathM
 elif os.path.exists(host_patW) == True:
     host_path = host_patW
-def unblock():
-    with open(host_path, "r+") as file:
-        content = file.readlines()
-        file.seek(0)
-        for web in content:
-            if not any(webs in web for webs in websites):
-                file.write(web)
-        file.truncate()
-        print("unblocked!!")
