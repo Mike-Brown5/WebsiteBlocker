@@ -23,6 +23,9 @@ def window():
 
    widget.setGeometry(50,50,320,200)
    widget.setWindowTitle("BLOCKER")
+   text = button1.text()
+   lable = PyQt5.QtWidgets.QLabel(text)
+   lable.move(100,100)
    widget.show()
    sys.exit(app.exec_())
 
