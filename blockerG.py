@@ -48,7 +48,7 @@ def block():
                     pass
                 else:
                         file.write(redirect + " "+web + "\n")
-            print("Working...")
+            print("BLOCKLED!!...")
 
 
 def unblock():
@@ -59,7 +59,7 @@ def unblock():
             if not any(webs in web for webs in websites):
                 file.write(web)
         file.truncate()
-        print("unblocked!!")
+        print("UNBLOCKD!!")
 
  
    
