@@ -9,8 +9,6 @@ from datetime import datetime as dt
 def window():
    app = QApplication(sys.argv)
    widget = QWidget()
-#    PyQt5.QtTextToSpeech.QTextToSpeech.__text_signature__("text")
-#    widget
    button1 = QPushButton(widget)
    button1.setText("BLOCK")
    button1.move(64,32)
@@ -40,13 +38,9 @@ elif os.path.exists(host_pathM) == True:
     host_path = host_pathM
 elif os.path.exists(host_patW) == True:
     host_path = host_patW
-#Defining the websites list
 websites = ["facebook.com", "youtube.com", "myanimelist.net", "instagram.com", "twitter.com","https://www.youtube.com/","https://www.facebook.com/"]
 
-#Blocking the websites on working hours (8AM:4PM)
 def block():
-    # while True:
-        # if dt(dt.now().year, dt.now().month, dt.now().day, 2) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day, 16):
         with open(host_path, "r+") as file:
             content = file.read()
             for web in websites:
@@ -55,16 +49,6 @@ def block():
                 else:
                         file.write(redirect + " "+web + "\n")
             print("Working...")
-        # else:
-        #     with open(host_path, "r+") as file:
-        #         content = file.readlines()
-        #         file.seek(0)
-        #         for web in content:
-        #             if not any(webs in web for webs in websites):
-        #                 file.write(web)
-        #         file.truncate()
-        #     print("Not working....")
-        # time.sleep(40)
 
 
 def unblock():
@@ -80,6 +64,4 @@ def unblock():
  
    
 if __name__ == '__main__':
-#    t1 = threading.Thread(target=window)
    window()
-#    t1.start()
